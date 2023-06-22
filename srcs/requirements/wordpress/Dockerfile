@@ -19,6 +19,4 @@ COPY ./requirements/wordpress/conf/www.conf /etc/php/7.3/fpm/pool.d/
 
 COPY ./requirements/wordpress/tools/docker_entry.sh /usr/local/bin/
 
-COPY ./requirements/wordpress/conf/wp-config.php /tmp/
-
 ENTRYPOINT ["docker_entry.sh"]

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-echo >> /etc/mysql/my.cnf
-echo "[mysqld]" >> /etc/mysql/my.cnf
-echo "bind-address=0.0.0.0" >> /etc/mysql/my.cnf
+echo >> $DB_CONF_ROUTE
+echo "[mysqld]" >> $DB_CONF_ROUTE
+echo "bind-address=0.0.0.0" >> $DB_CONF_ROUTE
 
-mysql_install_db --datadir=/var/lib/mysql
+mysql_install_db --datadir=$DB_INSTALL
 
 mysqld_safe &
 mysql_pid=$!

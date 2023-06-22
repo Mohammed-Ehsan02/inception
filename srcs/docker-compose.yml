@@ -4,6 +4,8 @@ services:
     build:
       dockerfile: ./requirements/nginx/Dockerfile
     container_name: nginx
+    env_file:
+      - ./.env
     volumes:
       - wordpress:/var/www/html/wordpress
     ports:
