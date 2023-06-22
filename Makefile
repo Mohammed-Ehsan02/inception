@@ -17,3 +17,5 @@ fclean: clean
 	docker volume prune -f
 
 re: fclean all
+
+.PHONY: all clean fclean re
