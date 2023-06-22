@@ -7,6 +7,8 @@ RUN apt update && apt install -y \
 	curl \
 	sendmail \
 	php-mysql \
+	php-mysqli \
+	mariadb-client \
 	php \
 	php-fpm && \
 	mkdir -p /run/php
