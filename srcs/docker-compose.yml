@@ -25,7 +25,7 @@ services:
       - wordpress:/var/www/html/wordpress
     networks:
       - web
-    ports:
+    expose:
       - "9000:9000"
     depends_on:
       - mariadb
@@ -40,7 +40,7 @@ services:
       - web
     env_file:
       - ./.env
-    ports:
+    expose:
       - "3306:3306"
     restart: always
 networks:
