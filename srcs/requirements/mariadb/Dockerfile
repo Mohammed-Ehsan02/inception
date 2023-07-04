@@ -8,4 +8,4 @@ RUN apt update && apt install -y \
 
 COPY ./requirements/mariadb/tools/docker_entry.sh /usr/local/bin/
 
-ENTRYPOINT ["docker_entry.sh"]
+CMD ["docker_entry.sh"]

@@ -6,6 +6,7 @@ echo "bind-address=0.0.0.0" >> $DB_CONF_ROUTE
 
 mysql_install_db --datadir=$DB_INSTALL
 
+mysqld_safe &
 mysql_pid=$!
 
 until mysqladmin ping >/dev/null 2>&1; do
@@ -18,4 +19,3 @@ mysql -u root -e "CREATE DATABASE $DB_NAME;
     FLUSH PRIVILEGES;"
 
 wait $mysql_pid
-mysqld_safe &
