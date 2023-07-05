@@ -11,4 +11,4 @@ wp core install --url=$WP_URL --title=$WP_TITLE --admin_user=$WP_ADMIN_USER --ad
 wp user create $WP_USER $WP_EMAIL --role=author --user_pass=$WP_PASS --allow-root
 fi
 
-php-fpm7.3 -F
+php-fpm7.4 -F

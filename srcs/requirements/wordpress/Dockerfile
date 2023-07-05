@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 USER root
 
@@ -17,7 +17,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 	chmod +x wp-cli.phar && \
 	mv wp-cli.phar /usr/local/bin/wp
 
-COPY ./requirements/wordpress/conf/www.conf /etc/php/7.3/fpm/pool.d/
+COPY ./requirements/wordpress/conf/www.conf /etc/php/7.4/fpm/pool.d/
 
 COPY ./requirements/wordpress/tools/docker_entry.sh /usr/local/bin/
 

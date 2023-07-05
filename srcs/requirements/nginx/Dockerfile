@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt -y update && apt install -y nginx && apt upgrade -y openssl
 
