@@ -9,7 +9,6 @@ inception:
 
 clean:
 	docker-compose -f ./srcs/docker-compose.yml down --rmi all -v --remove-orphans 2>/dev/null || true
-	docker-compose -f ./srcs/docker-compose-bonus.yml down --rmi all -v --remove-orphans 2>/dev/null  || true
 
 fclean: clean
 	rm -rf ${DIR}/data/*
