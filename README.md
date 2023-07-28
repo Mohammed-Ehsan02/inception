@@ -4,6 +4,7 @@ Summary: This document is a System Administration related exercise.
 # How to Run
 Rename the .env_example to .env and run make
 
+# References
 [Docker Crash Course](https://www.youtube.com/watch?v=Tyy1BUEmhwg&t=217)
 
 [What is Docker and its components?](https://www.sitepoint.com/what-is-docker/)
