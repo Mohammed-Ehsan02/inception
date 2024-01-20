@@ -3,6 +3,7 @@ services:
   nginx:
     build:
       dockerfile: ./requirements/nginx/Dockerfile
+    image: nginx
     container_name: nginx
     env_file:
       - ./.env
@@ -18,6 +19,7 @@ services:
   wordpress:
     build:
       dockerfile: ./requirements/wordpress/Dockerfile
+    image: wordpress
     container_name: wordpress
     env_file:
       - ./.env
@@ -33,6 +35,7 @@ services:
   mariadb:
     build:
       dockerfile: ./requirements/mariadb/Dockerfile
+    image: mariadb
     container_name: mariadb
     volumes:
       - mariadb:/var/lib/mysql
